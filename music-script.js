@@ -199,20 +199,6 @@ for (let i = 0; i < allMusic.length; i++) {
     liAudioDurationTag.innerText = `${totalMin}:${totalSec}`; //passing total duration of song
     liAudioDurationTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
   });
-
-
-  let liAudioDurationTag = ulTag.querySelector(`#${allMusic[i].src}`);
-  let liAudioTag = ulTag.querySelector(`.${allMusic[i].src}`);
-  liAudioTag.addEventListener("loadeddata", ()=>{
-    let duration = liAudioTag.duration;
-    let totalMin = Math.floor(duration / 60);
-    let totalSec = Math.floor(duration % 60);
-    if(totalSec < 10){ //if sec is less than 10 then add 0 before it
-      totalSec = `0${totalSec}`;
-    };
-    liAudioDurationTag.innerText = `${totalMin}:${totalSec}`; //passing total duration of song
-    liAudioDurationTag.setAttribute("t-duration", `${totalMin}:${totalSec}`); //adding t-duration attribute with total duration value
-  });
 }
 
 //play particular song from the list onclick of li tag
@@ -246,24 +232,3 @@ function clicked(element){
   playMusic();
   playingSong();
 }
-// Keyboard event listeners
-document.addEventListener("keydown", function (event) {
-  switch (event.key) {
-    case "Space":
-      // Pause or play on Spacebar press
-      const isMusicPlay = wrapper.classList.contains("paused");
-      isMusicPlay ? pauseMusic() : playMusic();
-      playingSong();
-      break;
-    case "ArrowLeft":
-      // Previous track on Left arrow key press
-      prevMusic();
-      break;
-    case "ArrowRight":
-      // Next track on Right arrow key press
-      nextMusic();
-      break;
-    default:
-      break;
-  }
-});
