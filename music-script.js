@@ -231,8 +231,7 @@ function clicked(element){
   loadMusic(musicIndex);
   playMusic();
   playingSong();
-}
-// Add this code to your music-script.js file
+}// Add this code to your music-script.js file
 
 // Function to change background gradient
 function changeBackgroundGradient(color1, color2) {
@@ -271,3 +270,4 @@ function onSongChange(songName) {
 setInterval(() => {
     onSongChange('Song 1');
 }, 5000); // Change the song every 5 seconds for demonstration
+
