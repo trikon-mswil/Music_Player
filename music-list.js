@@ -13,8 +13,8 @@ let allMusic = [
     {
       name: "Apna Bana Le",
       artist: "Arjit Singh",
-      img: "https://ik.imagekit.io/trikon/images/1.jpg",
-      src: "https://ik.imagekit.io/trikon/songs/1.mp3"
+      img: "1",
+      src: "1"
     },
     {
       name: "Players",
@@ -127,7 +127,7 @@ let allMusic = [
     {
       name: "Faasle",
       artist: "Aditya Rikhari",
-      img: "14",
+      img: "20",
       src: "20"
     },
     // like this paste it and remember to give comma after ending of this bracket }
