@@ -232,3 +232,36 @@ function clicked(element){
   playMusic();
   playingSong();
 }
+
+// Add this code to your music-script.js file
+
+// Function to change background color
+function changeBackgroundColor(color) {
+    document.body.style.transition = 'background 0.5s ease-in-out';
+    document.body.style.background = color;
+}
+
+// Function to generate a random color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Function to be called when the song changes
+function onSongChange(songName) {
+    // You can implement your logic here to determine the background color based on the song
+    // For this example, let's generate a random color
+    const backgroundColor = getRandomColor();
+
+    // Change the background color
+    changeBackgroundColor(backgroundColor);
+}
+
+// Simulate a song change (replace this with your actual event triggering the song change)
+setInterval(() => {
+    onSongChange('Song 1');
+}, 5000); // Change the song every 5 seconds for demonstration
