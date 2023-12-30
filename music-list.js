@@ -13,8 +13,8 @@ let allMusic = [
     {
       name: "Apna Bana Le",
       artist: "Arjit Singh",
-      img: "1",
-      src: "1"
+      img: "https://ik.imagekit.io/trikon/images/1.jpg?updatedAt=1703912662951",
+      src: "https://ik.imagekit.io/trikon/songs/1.mp3?updatedAt=1703912262194"
     },
     {
       name: "Players",
