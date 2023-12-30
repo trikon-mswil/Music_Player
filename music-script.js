@@ -232,13 +232,19 @@ function clicked(element){
   playMusic();
   playingSong();
 }
-
 // Add this code to your music-script.js file
 
-// Function to change background color
-function changeBackgroundColor(color) {
+// Function to change background gradient
+function changeBackgroundGradient(color1, color2) {
     document.body.style.transition = 'background 0.5s ease-in-out';
-    document.body.style.background = color;
+    document.body.style.background = `linear-gradient(90deg, ${color1} 0%, ${color2} 100%)`;
+}
+
+// Function to generate a random gradient
+function getRandomGradient() {
+    const color1 = getRandomColor();
+    const color2 = getRandomColor();
+    return [color1, color2];
 }
 
 // Function to generate a random color
@@ -253,12 +259,12 @@ function getRandomColor() {
 
 // Function to be called when the song changes
 function onSongChange(songName) {
-    // You can implement your logic here to determine the background color based on the song
-    // For this example, let's generate a random color
-    const backgroundColor = getRandomColor();
+    // You can implement your logic here to determine the background gradient based on the song
+    // For this example, let's generate a random gradient
+    const [color1, color2] = getRandomGradient();
 
-    // Change the background color
-    changeBackgroundColor(backgroundColor);
+    // Change the background gradient
+    changeBackgroundGradient(color1, color2);
 }
 
 // Simulate a song change (replace this with your actual event triggering the song change)
